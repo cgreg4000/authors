@@ -53,11 +53,12 @@ const EditAuthor = () => {
             <div>
                 <h1>Edit an Author</h1>
                 <Link to="/" >Home</Link>
-                <form className='mt-2' onSubmit={submitHandler}>
-                    <label className='mb-2'>Full name:</label>
+                <form className='mt-3' onSubmit={submitHandler}>
+                    <label className='mb-3'>Full name:</label>
                     <input className='form-control mb-3' type="text" onChange={(e) => setFullName(e.target.value)} value={fullName}></input>
                     <p className='text-danger'>{formError.fullName?.message}</p>
-                    <input className='btn btn-secondary' type="submit" />
+                    <Link to="/" className='btn btn-secondary m-2' >Cancel</Link>
+                    <input className='btn btn-secondary m-2' type="submit" />
                 </form>
             </div>
     )

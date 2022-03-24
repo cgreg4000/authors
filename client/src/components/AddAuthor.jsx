@@ -31,11 +31,12 @@ const AddAuthor = () => {
         <>
             <h1>Add a New Author</h1>
             <Link to="/" >Home</Link>
-            <form className='mt-2' onSubmit={submitHandler}>
-                <label className='mb-2'>Full name:</label>
-                <input className='form-control mb-3' type="text" onChange={(e) => setFullName(e.target.value)}></input>
+            <form className='mt-3' onSubmit={submitHandler}>
+                <label className='mb-3'>Full name:</label>
+                <input className='form-control' type="text" onChange={(e) => setFullName(e.target.value)}></input>
                 <p className='text-danger'>{formError.fullName?.message}</p>
-                <input className='btn btn-secondary' type="submit" />
+                <Link to="/" className='btn btn-secondary m-2' >Cancel</Link>
+                <input className='btn btn-secondary m-2' type="submit" />
             </form>
         </>
     )
