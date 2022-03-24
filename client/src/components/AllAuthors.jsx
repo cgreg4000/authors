@@ -11,10 +11,10 @@ const AllAuthors = () => {
             .then(response => {
                 console.log(response.data.authors)
                 setAuthorList(response.data.authors.sort((a, b) => {
-                    if (a.fullName < b.fullName) {
+                    if (a.fullName.toUpperCase() < b.fullName.toUpperCase()) {
                         return -1
                     }
-                    if (a.fullName > b.fullName) {
+                    if (a.fullName.toUpperCase() > b.fullName.toUpperCase()) {
                         return 1
                     }
                     return 0
